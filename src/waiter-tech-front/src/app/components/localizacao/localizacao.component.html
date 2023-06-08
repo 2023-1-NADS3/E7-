@@ -1,0 +1,30 @@
+<header>
+    <img (click)="goBack()" src="../../../assets/seta-esquerda.png" alt="">
+    <h1>busca</h1>
+</header>
+
+<div>
+    <div class="image_c">
+        <img src={{restaurantData.photo}} class="image_cc">
+    </div>
+
+    <h1 class="titulo">{{restaurantData.restaurantName}}</h1>
+
+    <p class="endereco">{{restaurantData.address}}</p>
+
+
+    <div class="funcionamento">
+        <h2>Funcionamento</h2>
+        <p>{{restaurantData.time}}</p>
+    </div>
+
+    <div class="contato">
+        <h2>Contato</h2>
+
+        <div class="image_w">
+            <img class="zap-img" src="../../../assets/whatsapp-3.png">
+            <p style="margin: 0;">{{restaurantData.contact}}</p>
+        </div>
+
+    </div>
+</div>

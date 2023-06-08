@@ -1,0 +1,196 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header img {
+    height: 30px;
+    margin-left: 20px;
+}
+
+h1 {
+    text-align: center;
+    flex: 2;
+    text-transform: uppercase;
+    margin-top: 13px;
+}
+
+/* CONFIG IMAGEM E PREÇO DO PEDIDO */
+
+.general-content {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.order {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(221, 229, 182, 0.45);
+    width: 314px;
+    height: 323px;
+    border-radius: 10px;
+}
+
+.dish-choice {
+    width: 289px;
+    height: 191px;
+    border-radius: 10px;
+}
+
+.dish-info {
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 17px;
+    margin-bottom: 5px;
+}
+
+
+/* CONTADOR */
+
+.counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 16px;
+    gap: 16px;
+    font-size: 40px;
+}
+
+.less-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(224, 71, 91, 0.88);
+    color: #fff;
+    font-size: 40px;
+    width: 40px;
+    height: 40px;
+    padding-top: 8px;
+}
+
+.less{
+    padding-bottom: 8px;
+}
+
+/* DESCRIÇÃO */
+
+.dish-details {
+    max-width: 90%;
+    margin-left: 24px;
+    margin-bottom: 24px;
+}
+
+.dish-detais p {
+    font-size: 18px;
+    font-weight: 100;
+    margin-bottom: 24px;
+    margin-left: 10px;
+}
+
+.more-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+span {
+    font-size: 20px;
+    word-wrap: break-word;
+    white-space: break-spaces;
+}
+
+.add-obs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.large-input {
+    width: 314px;
+    height: 84px;
+    resize: none;
+    border: none;
+    color: #000;
+    border-radius: 13px;
+    word-wrap: break-word;
+    padding: 8px 0 0 15px;
+    font-size: 18px;
+    word-wrap: break-word;
+    white-space: break-spaces;
+}
+
+::placeholder {
+    display: flex;
+    text-indent: 0;
+    white-space: pre-wrap;
+    line-height: 2.5px;
+    text-align: start;
+    font-size: 18px;
+    line-height: 18px;
+    margin: 0;
+    padding: 0;
+    word-wrap: break-word;
+    white-space: break-spaces;
+}
+
+.large-input::placeholder {
+    position: absolute;
+    padding: 10px 0;
+}
+
+.finish-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3vh;
+}
+
+.btn {
+    width: 165px;
+    height: 49px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(224, 71, 91, 0.88);
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+/* Modal */
+
+.modal-header {
+    border: none;
+}
+
+.modal-body {
+    font-size: 22px;
+    text-align: center;
+    display: flex;
+    flex-direction: space-evenly;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-body img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+}

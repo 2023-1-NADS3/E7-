@@ -1,0 +1,22 @@
+<header>
+    <img (click)="goBack()" src="../../../assets/seta-esquerda.png" alt="">
+    <h1>{{restaurantName}}</h1>
+    <img (click)="goCart()" src="../../../assets/shopping-cart.png" alt="">
+</header>
+
+<main>
+    <div class="container">
+        <div class="retangulo verde1" (click)="goDishes('Prato')">
+            <img class="img-option" src="assets/dishes.png" alt="">
+            <h2>Pratos</h2>
+        </div>
+        <div class="retangulo verde2" (click)="goDishes('Bebida')">
+            <img class="img-option" src="assets/drink.png" alt="">
+            <h2>Bebidas</h2>
+        </div>
+        <div class="retangulo verde3" (click)="goDishes('Sobremesa')">
+            <img class="img-option" src="assets/dessert.png" alt="">
+            <h2>Sobremesas</h2>
+        </div>
+    </div>
+</main>

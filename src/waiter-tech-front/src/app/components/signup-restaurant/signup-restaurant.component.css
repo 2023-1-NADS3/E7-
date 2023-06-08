@@ -1,0 +1,106 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header img {
+    height: 30px;
+    margin-left: 20px;
+    margin-top: 25px;
+}
+
+
+.signup-restaurant div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.theW {
+    padding: 0;
+    margin-top: -30px;
+}
+
+.image {
+    width: 250px;
+    height: 250px;
+    margin: 0;
+}
+
+.label-init {
+    display: flex;
+    font-family: 'Inter', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #192F01;
+    margin-top: -10px;
+}
+
+form {
+    width: 100%;
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-top: 20px;
+
+}
+
+.label input {
+    width: 70%;
+    height: 45px;
+    border: none;
+    padding-left: 10px;
+    font-size: 18px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.184);
+    background-color: #F7F7F2;
+}
+
+.button {
+    padding-top: 10px;
+}
+
+.restaurant-signup-button {
+    width: 246.74px;
+    height: 55px;
+    font-size: 26px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-family: 'League Spartan', sans-serif;
+    background-color: rgba(25, 47, 1, 0.88);
+    color: #F8EFEA;
+    border: none;
+}
+
+/* Tooltip */
+
+.tooltip {
+    display: block;
+    color: #E0475B;
+    font-size: 12px;
+}
+
+/* Alert config */
+
+.alert {
+    position: fixed;
+    display: none;
+    top: 25px;
+    z-index: 999;
+    transition: opacity 0.5s ease-out;
+}
+
+svg {
+    width: 30px;
+    margin-right: 15px;
+}

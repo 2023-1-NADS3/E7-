@@ -1,0 +1,41 @@
+<div class="login-restaurant">
+    <div>
+        <img class="image" src="assets/W.png" alt="Logo-App">
+    </div>
+
+    <div class="label-init">
+        <span>Olá</span>
+        <span>Faça login em sua conta</span>
+    </div>
+
+    <form #loginForm="ngForm" (ngSubmit)="login()">
+        <div class="label">
+            <div class="email">
+                <input name="email" [(ngModel)]="userLogin.email" type="email" placeholder="Email">
+            </div>
+            <div class="password">
+                <input name="password" [(ngModel)]="userLogin.password" type="password" placeholder="Senha">
+            </div>
+
+            <div class="button">
+                <button type="submit" class="login-button">Login</button>
+            </div>
+        </div>
+    </form>
+    <div class="anchor">
+        <div><a (click)="signUpRoute()">Cadastrar Restaurante</a></div>
+        <div><a (click)="forgetRoute()">Esqueceu a Sua Senha?</a></div>
+    </div>
+</div>
+
+<!-- Alert -->
+<div id="alert" style="display: flex;" class="alert alert-danger align-items-center" role="alert">
+    <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2"
+        viewBox="0 0 16 16" role="img" aria-label="Warning:">
+        <path
+            d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+    </svg>
+    <div>
+        E-mail e/ou senha incorretos.
+    </div>
+</div>

@@ -1,0 +1,116 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header img {
+    height: 30px;
+    margin-left: 20px;
+}
+
+h1 {
+    text-align: center;
+    flex: 2;
+    text-transform: uppercase;
+}
+
+/* FIM CONFIG HEADER */
+
+.user-info {
+    background-color: #B7E4C7;
+    border-radius: 10px;
+    width: 95%;
+    margin: 3vh auto 10vh;
+}
+
+.user-info-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 5px;
+}
+
+.user-info-content img {
+    width: 84px;
+    height: 84px;
+    border-radius: 47px;
+    margin: 10px;
+}
+
+.titles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+/* FIM CONFIG IDENTIFICAÇÃO */
+
+.restaurant-data {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 2vh 2vh 0 2vh;
+    gap: 3vh;
+}
+
+.user-icon {
+    background-color: #74C69D;
+    border-radius: 7px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+.left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2vh;
+    font-size: 20px;
+}
+
+p {
+    margin: 0;
+    font-weight: 100;
+}
+
+/* FIM DA CONFIGURAÇÃO DAS INFORMAÇÕES*/
+
+.edit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+button {
+    background-color: #FFDDE2;
+    border: none;
+    border-radius: 7px;
+    color: #14213D;
+    text-transform: uppercase;
+    width: 100px;
+    height: 28px;
+    font-size: 16px;
+}

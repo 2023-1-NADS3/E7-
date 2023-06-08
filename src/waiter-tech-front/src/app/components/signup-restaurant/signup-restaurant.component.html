@@ -1,0 +1,78 @@
+<div class="signup-restaurant">
+    <header>
+        <img (click)="goBack()" src="../../../assets/seta-esquerda.png" alt="">
+    </header>
+
+    <div class="theW">
+        <img class="image" src="assets/W.png" alt="Logo-App">
+    </div>
+
+    <div class="label-init">
+        <span>Olá</span>
+        <span>Cadastre o seu Restaurante</span>
+    </div>
+
+    <form (ngSubmit)="signUp()">
+        <div class="label">
+            <div class="restaurantName">
+                <input name="restaurantName" type="text" [(ngModel)]="userData.restaurantName"
+                    placeholder="Nome do Restaurante" required>
+            </div>
+            <div class="email">
+                <input name="email" type="email" [(ngModel)]="userData.email" placeholder="Email" required>
+                <p id="mailMessage" style="display: none;">O email deve ser um email válido</p>
+            </div>
+            <div class="cpf_cnpj">
+                <input name="cpf_cnpj" type="text" [(ngModel)]="userData.cpf_cnpj" placeholder="CPF/CNPJ" required>
+            </div>
+            <div class="password">
+                <input name="password" type="password" [(ngModel)]="userData.password" placeholder="Senha" name="senha">
+                <p id="passwordMessage" style="display: none; text-align: center;">A sua senha deve conter pelo menos 8
+                    caracteres, sendo eles: letra maiúscula,
+                    minúscula, numeros e caractere especial</p>
+            </div>
+
+            <div class="button">
+                <p id="message" style="color: red; display: none;">Todos os campos devem ser preenchidos</p>
+                <button type="submit" class="restaurant-signup-button">Cadastrar</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<!-- Alert cadastrado com sucesso -->
+<div id="success" class="alert alert-success align-items-center" role="alert" style="display: flex;">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+        <path
+            d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z" />
+        <path
+            d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z" />
+    </svg>
+    <div>
+        Usuário cadastrado com sucesso!
+    </div>
+</div>
+
+<!-- Alert CPF/CNPJ já cadastrado -->
+<div id="idNumber" class="alert alert-warning align-items-center" role="alert" style="display: flex;">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-exclamation-circle" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+        <path
+            d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z" />
+    </svg>
+    <div>
+        CPF/CNPJ já cadastrado no sistema
+    </div>
+</div>
+
+<!-- Alert e-mail já cadastrado -->
+<div id="mailID" class="alert alert-warning align-items-center" role="alert" style="display: flex;">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-exclamation-circle" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+        <path
+            d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z" />
+    </svg>
+    <div>
+        E-mail já cadastrado no sistema
+    </div>
+</div>

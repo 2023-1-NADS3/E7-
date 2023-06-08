@@ -1,0 +1,130 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.return {
+    height: 30px;
+    margin-left: 20px;
+}
+
+h1 {
+    text-align: center;
+    flex: 2;
+    text-transform: uppercase;
+}
+
+.add-item {
+    background-color: #52B788;
+    margin-right: 15px;
+    border-radius: 25px;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-item img {
+    width: 37px;
+    height: 37px;
+}
+
+/* DIVISÃO DO MENU */
+
+.content {
+    height: 100%;
+}
+
+.container {
+    gap: 20px;
+    padding: 0;
+}
+
+.background {
+    height: 113px;
+}
+
+.option {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.details {
+    display: flex;
+    margin: 20px 10px 20px 0;
+    background-color: #F8EFEA;
+    width: 100%;
+}
+
+.food-img {
+    width: 130px;
+    height: 94px;
+    margin: 10px 0 10px 10px;
+    border-radius: 10px;
+}
+
+h2 {
+    font-size: 23px;
+    text-transform: uppercase;
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.buttons {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.edit-delete {
+    width: 34px;
+    height: 34px;
+}
+
+.edit-delete,
+h2 {
+    margin-left: 10px;
+}
+
+/* Botão de adicionar */
+
+.btn {
+    display: flex;
+    justify-content: center;
+}
+
+/* Config modal*/
+
+.modal-content {
+    font-family: 'League Spartan', sans-serif;
+    ;
+}
+
+.btn-primary {
+    background-color: #E0475B;
+    color: #FFFFFF;
+    border: none;
+}
+
+.modal-body {
+    text-align: center;
+}
+
+/* Alert config */
+
+.alert {
+    position: fixed;
+    top: 25px;
+    z-index: 999;
+    transition: opacity 0.5s ease-out;
+}
+
+svg {
+    width: 30px;
+}

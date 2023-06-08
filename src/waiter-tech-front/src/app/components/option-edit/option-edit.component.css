@@ -1,0 +1,207 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header img {
+    height: 30px;
+    margin-left: 20px;
+}
+
+h1 {
+    text-align: center;
+    flex: 2;
+    text-transform: uppercase;
+}
+
+/* FIM CONFIG HEADER */
+
+.user-info {
+    background-color: #B7E4C7;
+    border-radius: 10px;
+    width: 95%;
+    margin: 3vh auto;
+}
+
+.user-info-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 5px;
+}
+
+.rest-img {
+    width: 84px;
+    height: 84px;
+    border-radius: 47px;
+    margin: 10px;
+}
+
+.img-container {
+    position: relative;
+    display: inline-block;
+}
+
+.edit-overlay {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 84px;
+    height: 84px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 47px;
+}
+
+.edit-icon {
+    width: 60px;
+    height: 60px;
+    filter: invert(1);
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size: 24px;
+    text-align: center;
+}
+
+/* FIM CONFIG IDENTIFICAÇÃO */
+
+h3 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 5vh;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.67);
+}
+
+.restaurant-data {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 0vh 2vh 0 2vh;
+    gap: 20px;
+}
+
+.user-icon {
+    background-color: #74C69D;
+    border-radius: 7px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+.left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+}
+
+p {
+    margin: 0;
+    font-weight: 100;
+}
+
+/* FIM DA CONFIGURAÇÃO DAS INFORMAÇÕES*/
+
+.edit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2vh;
+    margin-bottom: 7vh;
+}
+
+.save-changes {
+    background-color: #FFDDE2;
+    border: none;
+    border-radius: 7px;
+    color: #14213D;
+    text-transform: uppercase;
+    width: 243px;
+    height: 49px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* CONFIGURAÇÕES RELACIONADAS AOS INPUTS */
+
+.new-info {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2vh;
+}
+
+input {
+    border: none;
+    color: #000;
+    border-radius: 13px;
+    word-wrap: break-word;
+    padding: 0 0 0 15px;
+    width: 100%;
+    height: 42px;
+}
+
+::placeholder {
+    display: flex;
+    text-indent: 0;
+    white-space: pre-wrap;
+    line-height: 2.5px;
+    text-align: start;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+/* Modal para confirmar se quer alterar ou não */
+
+.modal-header,
+.modal-footer {
+    border: none;
+}
+
+.modal-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.btn-primary {
+    background-color: #FFDDE2;
+    border: none;
+    border-radius: 7px;
+    color: #14213D;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* Alert config */
+
+.alert{ 
+    position: fixed;
+    top: 25px;
+    z-index: 999;
+    transition: opacity 0.5s ease-out;
+}
+
+svg{
+    width: 30px;
+}

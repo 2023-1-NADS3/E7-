@@ -1,0 +1,148 @@
+<header>
+    <img (click)="goBack()" src="../../../assets/seta-esquerda.png" alt="">
+    <h1>Configurações</h1>
+</header>
+
+<div>
+
+    <div class="user-info">
+        <div class="user-info-content">
+            <div class="img-container">
+                <img class="rest-img" src={{restaurantPhoto}} alt="">
+                <div class="edit-overlay">
+                    <label for="img-upload">
+                        <img type="button" class="edit-icon" src="../../../assets/camera preta.png" alt="Editar imagem">
+                    </label>
+                    <input accept="image/jpeg, image/png" (change)="changeImage($event)" id="img-upload" type="file"
+                        style="display: none">
+                </div>
+            </div>
+            <h2>{{nameRestaurant}}</h2>
+        </div>
+    </div>
+
+    <div>
+        <h3>Edite as suas informações</h3>
+    </div>
+
+
+    <form>
+        <div class="restaurant-data">
+
+            <div>
+                <div class="left">
+                    <div class="user-icon">
+                        <img src="../../../assets/do-utilizador.png" alt="">
+                    </div>
+
+                    <div class="name-info">
+                        <p>Nome</p>
+                    </div>
+                </div>
+
+                <div class="new-info">
+                    <input type="text" name="restaurantName" [(ngModel)]="restaurantData.restaurantName"
+                        placeholder="Digite o novo nome">
+                </div>
+
+            </div>
+
+            <div>
+                <div class="left">
+                    <div class="user-icon">
+                        <img src="../../../assets/iphone.png" alt="">
+                    </div>
+
+                    <div class="phone-info">
+                        <p>Telefone</p>
+                    </div>
+                </div>
+
+                <div class="new-info">
+                    <input type="tel" name="phone" [(ngModel)]="restaurantData.contact" maxlength="15"
+                        placeholder="Digite o telefone" (keypress)="handlePhone($event)">
+                </div>
+            </div>
+
+            <div>
+                <div class="left">
+                    <div class="user-icon">
+                        <img src="../../../assets/localizacao.png" alt="">
+                    </div>
+
+                    <div class="address-info">
+                        <p>Endereço</p>
+                    </div>
+                </div>
+
+                <div class="new-info">
+                    <input type="text" name="address" [(ngModel)]="restaurantData.address"
+                        placeholder="Digite o novo endereço">
+                </div>
+            </div>
+
+            <div>
+                <div class="left">
+                    <div class="user-icon">
+                        <img src="../../../assets/relogio.png" alt="">
+                    </div>
+
+                    <div class="openings-info">
+                        <p>Horário de funcionamento</p>
+                    </div>
+                </div>
+
+                <div class="new-info">
+                    <input type="text" name="time" [(ngModel)]="restaurantData.time"
+                        placeholder="Digite o novo horário de funcionamento">
+                </div>
+            </div>
+
+
+            <div class="edit-btn">
+                <button class="save-changes" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal">salvar
+                    alterações</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Você tem certeza que deseja fazer as alterações?
+                </h1>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary" (click)="updateData()" data-bs-dismiss="modal">Salvar
+                    alterações</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Alert -->
+<div id="alert" class="alert alert-danger align-items-center" role="alert" style="display: flex;">
+    <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2"
+        viewBox="0 0 16 16" role="img" aria-label="Warning:">
+        <path
+            d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+    </svg>
+    <div>
+        Você não está logado, por favor acesse a sua conta antes de prosseguir.
+    </div>
+</div>
+
+<div id="errorEdit" class="alert alert-danger align-items-center" role="alert" style="display: flex;">
+    <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2"
+        viewBox="0 0 16 16" role="img" aria-label="Warning:">
+        <path
+            d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+    </svg>
+    <div>
+        Não foi possível fazer as alterações. Verifique os campos, por favor.
+    </div>
+</div>

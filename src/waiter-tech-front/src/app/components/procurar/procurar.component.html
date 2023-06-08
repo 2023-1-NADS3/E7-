@@ -1,0 +1,25 @@
+<header>
+    <img (click)="goBack()" src="../../../assets/seta-esquerda.png" alt="">
+    <h1>busca</h1>
+</header>
+
+<div class="seach-bar">
+    <div class="procurar" (keyup.enter)="searchFunction()">
+        <img class="lupa" src="../../../assets/lupa.png" alt="">
+        <input placeholder="pesquisar restaurantes" class="input_pesquisar" [(ngModel)]="search">
+    </div>
+</div>
+
+<h1 class="restaurantes">RESTAURANTES CADASTRADOS</h1>
+
+<div class="content">
+    <div class="restaurants" *ngFor="let restaurant of restaurants">
+        <div (click)="goLocal(restaurant.ID)" class="restaurant">
+            <img src={{restaurant.image}}>
+            <div class="data">
+                <h1>{{restaurant.restaurant_name}}</h1>
+                <p>{{restaurant.contact}}</p>
+            </div>
+        </div>
+    </div>
+</div>

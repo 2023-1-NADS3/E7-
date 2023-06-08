@@ -1,0 +1,57 @@
+<header>
+    <img (click)="goBack()" src="../../../assets/seta-esquerda.png" alt="">
+    <h1>Carrinho</h1>
+</header>
+
+<div>
+    <div class="shop">
+        <div class="background" *ngFor="let item of orders">
+            <div class="content">
+                <div>
+                    <p class="qtd">{{item.quantity}}</p>
+                </div>
+                <img src={{item.image}} alt="" class="food-img">
+                <div>
+                    <h2>{{item.dish}}</h2>
+                    <p>{{item.price}}</p>
+                </div>
+                <div>
+                    <img class="delete" src="../../../assets/recycle-bin.png" alt=""
+                        (click)="removeItem(item.position)">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="total">
+        <h3>Total</h3>
+        <span>{{total}}</span>
+    </div>
+
+    <div class="table-place">
+        <label for="board">Mesa:</label>
+        <input class="table-input" type="text" name="board" [(ngModel)]="board">
+    </div>
+    <br>
+    <div class="add-order">
+        <button type="button" (click)="order()" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">fazer
+            pedido</button>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen-sm-down">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Pedido concluído com sucesso!</h1>
+            </div>
+            <div class="modal-body">
+                <img class="ok" src="../../../assets/wired-flat-146-basket-trolley-shopping-card-2.gif" alt="">
+                <p class="confirmation">Agora é só aguardar que em breve ele será entregue na sua mesa!</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>

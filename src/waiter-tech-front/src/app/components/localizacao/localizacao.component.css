@@ -1,0 +1,68 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+header img {
+    height: 30px;
+    margin-left: 20px;
+}
+
+h1 {
+    text-align: center;
+    flex: 2;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+/* Fim configuração header */
+
+.image_c {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image_cc {
+    height: 300px;
+    width: 300px;
+    background-color: #FFDDE2;
+    border: 6px solid #FFDDE2;
+    border-radius: 6px;
+    margin: 10px 0;
+}
+
+.titulo {
+    text-align: center;
+    font-weight: bolder;
+}
+
+.endereco {
+    text-align: center;
+    font-weight: bolder;
+}
+
+.funcionamento {
+    margin: 28px;
+    font-weight: bolder;
+}
+
+
+.contato {
+    margin: 28px;
+    font-weight: bolder;
+}
+
+.image_w {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    font-weight: bolder;
+}
+
+.zap-img{
+    width: 21px;
+    height: 21px;
+}

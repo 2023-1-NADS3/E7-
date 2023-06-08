@@ -1,0 +1,17 @@
+<header>
+    <img (click)="goBack()" src="../../../assets/seta-esquerda.png" alt="">
+    <h1>restaurante</h1>
+    <img (click)="goCart()" src="../../../assets/shopping-cart.png" alt="">
+</header>
+
+<div class="container">
+    <div class="background" (click)="goDetails(dish)" *ngFor="let dish of dishes">
+        <div class="details">
+            <img class="food-img" src={{dish.image}} alt="">
+            <div class="text">
+                <h2>{{dish.dish_name}}</h2>
+                <p>{{dish.description}}</p>
+            </div>
+        </div>
+    </div>
+</div>

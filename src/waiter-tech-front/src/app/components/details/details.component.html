@@ -1,0 +1,53 @@
+<header>
+    <img (click)="goBack()" src="../../../assets/seta-esquerda.png" alt="">
+    <h1>Configurações</h1>
+</header>
+
+<div class="general-content">
+
+    <div class="content">
+        <div class="order">
+            <p class="dish-info">{{dish.dish_name}}</p>
+            <img src={{dish.image}} class="dish-choice">
+            <p class="dish-info">{{dish.price}}</p>
+        </div>
+    </div>
+
+    <div class="counter">
+        <button class="less-more less" (click)="decreaseAmount()">-</button>
+        <span>{{quantity}}</span>
+        <button class="less-more" (click)="increaseAmount()">+</button>
+    </div>
+
+    <div class="dish-details">
+        <p>Descrição</p>
+
+        <div class="more-details">
+            <span>{{dish.description}}</span>
+        </div>
+
+    </div>
+
+    <div class="add-obs">
+        <textarea name="" id="" cols="30" rows="10" type="text" placeholder="Observações: por exemplo, remover cebola" [(ngModel)]="obs" class="large-input"></textarea>
+    </div>
+
+    <div class="finish-info">
+        <button (click)="addToCart()" type="submit" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">adicionar</button>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <img src="../../../assets/wired-flat-139-basket.gif" alt="">
+          O item foi adicionado ao carrinho com sucesso!
+        </div>
+      </div>
+    </div>
+  </div>

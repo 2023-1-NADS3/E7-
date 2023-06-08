@@ -1,0 +1,92 @@
+<header>
+    <img (click)="goBack()" src="../../../assets/seta-esquerda.png" alt="">
+    <h1>Configurações</h1>
+</header>
+
+<div>
+
+    <div class="user-info">
+        <div class="user-info-content">
+            <img src={{restaurantData.photo}} alt="">
+            <div class="titles">
+                <h2>{{restaurantData.restaurantName}}</h2>
+                <h3>ID {{userID}}</h3>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="restaurant-data">
+
+        <div>
+            <div class="left">
+                <div class="user-icon">
+                    <img src="../../../assets/do-utilizador.png" alt="">
+                </div>
+
+                <div class="name-info">
+                    <p>{{restaurantData.name}}</p>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="left">
+                <div class="user-icon">
+                    <img src="../../../assets/sinal-de-arroba.png" alt="">
+                </div>
+
+                <div class="email-info">
+                    <p>{{restaurantData.email}}</p>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="left">
+                <div class="user-icon">
+                    <img src="../../../assets/iphone.png" alt="">
+                </div>
+
+                <div class="phone-info">
+                    <p>{{restaurantData.contact}}</p>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="left">
+                <div class="user-icon">
+                    <img src="../../../assets/localizacao.png" alt="">
+                </div>
+
+                <div class="address-info">
+                    <p>{{restaurantData.address}}</p>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="left">
+                <div class="user-icon">
+                    <img src="../../../assets/relogio.png" alt="">
+                </div>
+
+                <div class="openings-info">
+                    <p>{{restaurantData.time}}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="edit-btn">
+            <button (click)="editRoute()">editar</button>
+        </div>
+
+        <div class="edit-btn">
+            <button (click)="logout()" class="exit">Sair</button>
+        </div>
+
+    </div>
+
+
+</div>

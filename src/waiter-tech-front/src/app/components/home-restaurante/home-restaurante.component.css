@@ -1,0 +1,73 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+h1 {
+    text-align: center;
+    flex: 2;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+/* Configuração dos botões */
+
+.btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+}
+
+.order-control,
+.menu,
+.option{
+    width: 340px;
+    height: 108px;
+    border: none;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.btn-img{
+    width: 80px;
+    height: 80px;
+}
+
+p{
+    font-size: 30px;
+    word-break: break-all;
+    width: 154px;
+    text-align: center;
+    color: #192F01;
+}
+
+.order-control{
+    background-color: #B7E4C7;
+}
+
+.menu{
+    background-color: #95D5B2;
+}
+
+.option{
+    background-color: #74C69D;
+}
+
+/* Alert config */
+
+.alert{ 
+    position: fixed;
+    top: 25px;
+    z-index: 999;
+    transition: opacity 0.5s ease-out;
+}
+
+svg{
+    width: 30px;
+}

@@ -1,0 +1,65 @@
+<header>
+    <img (click)="goBack()" src="../../../assets/seta-esquerda.png" alt="">
+    <h1>Cardápio</h1>
+</header>
+
+<div class="add-menu">
+    <form (ngSubmit)="editItem()" enctype="multipart/form-data">
+        <div class="form-info">
+            <label for="">Nome do prato</label>
+            <input type="text" name="dishName" placeholder="Ex: Salmão grelhado" [(ngModel)]="itemData.dish_name"
+                class="small-input">
+        </div>
+
+        <div class="form-info">
+            <label for="">Descrição</label>
+            <textarea name="" id="" cols="30" rows="10" type="text" name="description"
+                [(ngModel)]="itemData.description"
+                placeholder="Ex: Salmão grelhado com arroz e salada de repolho de acompanhamento. Feijão opcional."
+                maxlength="100" class="large-input"></textarea>
+        </div>
+
+        <div class="form-info">
+            <label for="">Valor em R$</label>
+            <input type="number" step="0.01" name="price" [(ngModel)]="itemData.price"
+                placeholder="Utilize vírgula para os centavos" class="small-input">
+        </div>
+
+        <div class="show-yes-no">
+            <label for="">Aparecer no cardápio?</label>
+            <label class="switch">
+                <input type="checkbox" name="activated" [(ngModel)]="itemData.activated">
+                <span class="slider"></span>
+            </label>
+        </div>
+
+        <div class="container">
+            <button type="submit" class="btn">Salvar</button>
+        </div>
+    </form>
+</div>
+
+<!-- Alert -->
+<div id="alert" class="alert alert-danger align-items-center" role="alert" style="display: flex;">
+    <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2"
+        viewBox="0 0 16 16" role="img" aria-label="Warning:">
+        <path
+            d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+    </svg>
+    <div>
+        Você não está logado, por favor acesse a sua conta antes de prosseguir.
+    </div>
+</div>
+
+
+<div id="success" class="alert alert-success align-items-center" role="alert" style="display: flex;">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+        <path
+            d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z" />
+        <path
+            d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z" />
+    </svg>
+    <div>
+        Prato alterado com sucesso!!!
+    </div>
+</div>
