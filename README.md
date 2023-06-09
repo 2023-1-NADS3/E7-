@@ -102,7 +102,3 @@ Abra seu navegador e acesse https://waiter-tech.netlify.app/ para ver o aplicati
 - Adição, edição e exclusão de itens do cardápio
 - Pesquisa de restaurantes
 - Gerenciamento de comandas
-
-
-
-## Referências
