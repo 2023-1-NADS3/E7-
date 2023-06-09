@@ -78,3 +78,50 @@ export async function checkEmail(email)
         return err
     }
 }
+
+
+async function testGetIDFunction(id, esp)
+{
+    const idEnc = await getRestaurantId(id)
+    if(idEnc === esp)
+    {
+        return "O Restaurante com esse ID está cadastrado no banco de dados do sistema!"
+    }
+    else
+    {
+        return "Não existe nenhum usuário cadastrado com esse ID no banco de dados!"
+    }
+}
+
+// console.log(await testGetIDFunction(1, true))
+// //Retorna OK, pois existe um restaurante com esse ID
+// console.log(await testGetIDFunction(12, true))
+// //Retorna um erro, dizendo que o restaurante não existe no sistema
+
+async function testReturnNameFunction(id, esp)
+{
+    const nameEnc = await returnName(id) || ''
+    if(nameEnc.restaurant_name != undefined)
+    {
+        if(nameEnc.restaurant_name === esp)
+        {
+            return `Nome do Restaurante: ${nameEnc.restaurant_name}`
+        }
+        else if(nameEnc.restaurant_name != esp)
+        {
+            return `O ID informado retorna ${nameEnc.restaurant_name}, e não ${esp}!!!`
+        }
+    }
+    else
+    {
+        return "Não existe nenhum restaurante cadastrado com o ID informado!!!"
+    }
+}
+
+console.log(await testReturnNameFunction({id: 1}, "Teste Alpha/Beta"))
+//Retorna ok, já que o ID é de um restaurante cadastrado, e o nome para comparação está correto
+console.log(await testReturnNameFunction({id: 1}, "Teste Alpha"))
+//Retorna um erro, já que o ID informado existe no banco de dados, mas o nome comparado está errado
+console.log(await testReturnNameFunction({id: 12}, "Teste Alpha/Beta"))
+////Retorna um erro, já que o ID informado não existe no banco de dados, mesmo o nome estando correto
+

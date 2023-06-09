@@ -89,6 +89,9 @@ Abra seu navegador e acesse https://waiter-tech.netlify.app/ para ver o aplicati
 
 [MIT](https://choosealicense.com/licenses/mit/)
 
+## Layout
+
+[Figma](https://www.figma.com/file/CR6yysp7BUhxdJKKgB49f4/Waiter-Tec-(Copy)?type=design&node-id=0%3A1&t=mbNpDJZtpAKxmWDP-1)
 
 ## Funcionalidades
 

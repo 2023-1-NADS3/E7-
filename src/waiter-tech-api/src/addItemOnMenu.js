@@ -26,3 +26,28 @@ export async function addItemOnMenu(itemData)
         return error
     }
 }
+
+
+async function testAddItemOnMenu(item, esp)
+  {
+    const enc = await addItemOnMenu(item)
+    if(enc === esp)
+    {
+      return "Pedido cadastrado com sucesso no banco de dados!!!"
+    }
+    else
+    {
+      return `Erro ao cadastrar o pedido. Erro: ${enc}!!!`
+    }
+  }
+
+  const item = {
+    idRestaurant: 1,
+    dishName: 'Macarrão',
+    description: 'Macarrão com Molho Verde',
+    imageURL: '1DBGw5tyRTCz538sQEBG2gB19d7BnOTCZ',
+    price: 12,
+    activated: true,
+  }
+
+console.log(await testAddItemOnMenu(item, true))

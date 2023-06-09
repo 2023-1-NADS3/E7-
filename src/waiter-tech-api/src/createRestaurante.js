@@ -1,4 +1,5 @@
 import { openDB } from './configDB.js'
+import { encrypt } from './crypt.js'
 
 export async function createAccount(restaurantData) {
     try {
@@ -22,7 +23,29 @@ export async function createAccount(restaurantData) {
       }
     } catch (err) {
         const error =  err.message.split(": ")[2].split(".")[1]
-        console.log(error)
         return error
     }
   }
+
+  async function testCreateAccount(user, esp)
+  {
+    user.password = encrypt(user.password)
+    const enc = await createAccount(user)
+    if(enc.status === esp)
+    {
+      return "Restaurante cadastrado com sucesso no banco de dados!!!"
+    }
+    else
+    {
+      return `Erro ao cadastrar novo restaurante. Erro: ${enc} já cadastrado!!!`
+    }
+  }
+
+  const user = {
+    email: 'alphaTeste@gmail.com',
+    restaurantName: 'Teste teste',
+    cpf_cnpj: '123414454214',
+    password: '@Teste1234'
+  }
+
+console.log(await testCreateAccount(user, true))
