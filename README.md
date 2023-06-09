@@ -50,7 +50,7 @@ Certifique-se de que você tenha o Node.js instalado em seu computador. Para faz
 
 Clone este repositório em seu computador usando o comando abaixo:
 
-git clone https://github.com/sm1dbr/PI-project
+git clone https://github.com/2023-1-NADS3/E7-.git
 
 Instale as dependências do projeto usando o comando abaixo:
 npm install
